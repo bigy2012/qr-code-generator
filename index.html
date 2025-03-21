@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>QR Code Generator</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+            rel="stylesheet">
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+
+        <div class="container mt-5 p-4 shadow bg-white rounded">
+            <h2 class="text-center mb-4">QR Code Generator</h2>
+
+            <div class="mb-3">
+                <label for="textInput" class="form-label">ใส่ข้อความหรือ
+                    URL</label>
+                <input type="text" class="form-control" id="textInput"
+                    placeholder="พิมพ์ที่นี่...">
+            </div>
+
+            <div class="d-grid">
+                <button class="btn btn-primary" onclick="generateQRCode()">สร้าง
+                    QR Code</button>
+                <button class="btn btn-danger mt-3"
+                    onclick="resetData()">รีเซ็ต</button>
+                <button id="downloadBtn" class="btn btn-success mt-3 d-none"
+                    onclick="downloadQRCode()">ดาวน์โหลด QR Code</button>
+            </div>
+
+            <div id="qrcode"></div>
+        </div>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+        <script src="./script.js"></script>
+
+    </body>
+</html>
